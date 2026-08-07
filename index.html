@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>東北ワカサギ占い</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero-glow"></div>
+      <p class="eyebrow">WINTER ORACLE FOR WAKASAGI</p>
+      <h1>東北ワカサギ占い</h1>
+      <p class="hero-copy">釣行日・場所・釣りスタイルを選び、ワカサギタロットで今日の神託を受け取ろう。</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel">
+        <h2>神託を始める</h2>
+        <form id="fortune-form">
+          <label>
+            <span>釣行日</span>
+            <input type="date" id="tripDate" required />
+          </label>
+
+          <label>
+            <span>場所・釣りスタイル</span>
+            <select id="location" required></select>
+          </label>
+
+          <label>
+            <span>モード</span>
+            <select id="mode">
+              <option value="normal">NORMAL</option>
+              <option value="hard">HARD</option>
+            </select>
+          </label>
+
+          <button type="submit" class="primary-btn">カードを引く</button>
+        </form>
+
+        <div class="note-box">
+          <strong>試作版メモ</strong>
+          <p>このデモはそのままWeb公開できる静的サイト版です。気象は現段階では擬似データ表示で、あとから実天気API連携に差し替え可能です。</p>
+        </div>
+      </section>
+
+      <section class="panel result-panel" id="resultPanel">
+        <div class="empty-state" id="emptyState">
+          <div class="card-placeholder">🔮</div>
+          <h2>今日の神託を待っています</h2>
+          <p>左の入力からカードを引くと、天候・お告げ・仕掛け・予想釣果が表示されます。</p>
+        </div>
+
+        <div class="result hidden" id="resultContent">
+          <div class="result-head">
+            <div>
+              <p class="result-kicker">本日の神託</p>
+              <h2 id="resultLocation"></h2>
+              <p id="resultMeta"></p>
+            </div>
+            <div class="weather-summary">
+              <div class="weather-chip" id="weatherCondition"></div>
+              <div class="weather-grid">
+                <div><span>気温</span><strong id="weatherTemp"></strong></div>
+                <div><span>風</span><strong id="weatherWind"></strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="season-alert" id="seasonAlert"></div>
+
+          <div class="card-section">
+            <div class="tarot-card" id="tarotCard">
+              <div class="tarot-rank" id="tarotRankBadge"></div>
+              <div class="tarot-number" id="tarotNumber"></div>
+              <div class="tarot-name" id="tarotName"></div>
+              <div class="tarot-tagline" id="tarotTagline"></div>
+            </div>
+            <div class="oracle-copy">
+              <h3>今日のお告げ</h3>
+              <p id="oracleText"></p>
+            </div>
+          </div>
+
+          <div class="guidance-grid">
+            <div class="guide-card"><span>棚</span><strong id="guideShelf"></strong></div>
+            <div class="guide-card"><span>仕掛け</span><strong id="guideRig"></strong></div>
+            <div class="guide-card"><span>オモリ</span><strong id="guideSinker"></strong></div>
+            <div class="guide-card"><span>餌</span><strong id="guideBait"></strong></div>
+            <div class="guide-card"><span>穂先</span><strong id="guideTip"></strong></div>
+          </div>
+
+          <div class="catch-section">
+            <div class="catch-main">
+              <p>今日の本命</p>
+              <h3 id="catchMain"></h3>
+              <small id="catchRange"></small>
+            </div>
+            <div class="catch-note">
+              <h4>釣果の気配</h4>
+              <p id="catchText"></p>
+            </div>
+          </div>
+
+          <div class="bottom-grid">
+            <div class="info-box">
+              <h4>ラッキーアイテム</h4>
+              <p id="luckyItem"></p>
+            </div>
+            <div class="info-box">
+              <h4>現地ワンポイント</h4>
+              <p id="localTip"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
