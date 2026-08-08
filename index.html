@@ -1,113 +1,45 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#071522">
-  <meta name="description" content="東北のワカサギ釣りをタロットと実釣データで占うワカサギ神託アプリ">
-  <title>東北ワカサギ占い</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071522">
+<title>東北ワカサギ占い</title>
+<link rel="stylesheet" href="style.css?v=clean2">
 </head>
 <body>
-  <div class="app-shell">
-    <header class="hero">
-      <div class="hero-mark">✦</div>
-      <p class="eyebrow">TOHOKU WAKASAGI ORACLE</p>
-      <h1>東北ワカサギ占い</h1>
-      <p class="lead">実釣データ × 天気 × ワカサギタロット。釣行日の神託を引こう。</p>
-    </header>
-
-    <main class="layout">
-      <section class="panel form-panel" aria-labelledby="start-title">
-        <h2 id="start-title">❄ 神託を始める ❄</h2>
-        <form id="fortune-form">
-          <label><span>▣ 釣行日</span><input type="date" id="tripDate" required></label>
-          <label><span>⌖ 場所・釣りスタイル</span><select id="location" required></select></label>
-          <label><span>✦ モード</span>
-            <select id="mode">
-              <option value="normal">NORMAL</option>
-              <option value="hard">HARD</option>
-              <option value="oni">鬼HARD</option>
-            </select>
-          </label>
-          <button class="primary-btn" type="submit">✦ カードを引く ✦</button>
-        </form>
-        <p class="form-note">予報圏内なら天気・気温・風を反映。期間外でも来季への神託を引けます。</p>
-        <button class="gallery-btn" id="galleryBtn" type="button">22枚のカードを見る</button>
-      </section>
-
-      <section class="panel result-panel" aria-live="polite">
-        <div class="empty-state" id="emptyState">
-          <div class="card-placeholder">✧<b>?</b>✧</div>
-          <h2>今日の神託を待っています</h2>
-          <p>日付と釣り場を選んでカードを引いてください。</p>
-        </div>
-
-        <div class="result hidden" id="resultContent">
-          <div class="result-head">
-            <div>
-              <p class="result-kicker">本日の神託</p>
-              <h2 id="resultLocation"></h2>
-              <p id="resultMeta"></p>
-            </div>
-            <div class="weather-summary">
-              <h3>湖上コンディション</h3>
-              <div class="weather-chip" id="weatherCondition">確認中</div>
-              <div class="weather-grid">
-                <div><span>気温</span><strong id="weatherTemp">--</strong></div>
-                <div><span>風</span><strong id="weatherWind">--</strong></div>
-              </div>
-            </div>
-          </div>
-          <div class="season-alert" id="seasonAlert"></div>
-
-          <div class="card-section">
-            <figure class="tarot-card" id="tarotCard">
-              <img id="tarotImage" alt="">
-              <span class="rank-corner" id="tarotRankBadge"></span>
-            </figure>
-            <div class="oracle-column">
-              <div class="rank-plaque">
-                <span class="rank-disc" id="rankDisc">A</span>
-                <span><small>RANK</small><b id="rankMetal">SILVER</b></span>
-              </div>
-              <div class="card-title"><span id="tarotNumber"></span><b id="tarotName"></b></div>
-              <div class="oracle-copy">
-                <h3>本日の神託</h3>
-                <p id="oracleText"></p>
-                <em id="tarotTagline"></em>
-              </div>
-            </div>
-          </div>
-
-          <div class="section-title"><span></span><b>本日の導き</b><span></span></div>
-          <div class="guidance-grid">
-            <div class="guide-card"><i>≋</i><span>棚</span><strong id="guideShelf"></strong></div>
-            <div class="guide-card"><i>⌁</i><span>仕掛け</span><strong id="guideRig"></strong></div>
-            <div class="guide-card"><i>●</i><span>オモリ</span><strong id="guideSinker"></strong></div>
-            <div class="guide-card"><i>◉</i><span>餌</span><strong id="guideBait"></strong></div>
-            <div class="guide-card"><i>╱</i><span>穂先</span><strong id="guideTip"></strong></div>
-          </div>
-
-          <div class="catch-section">
-            <div class="catch-main"><p>今日の本命</p><h3 id="catchMain"></h3><small id="catchRange"></small><div class="fish-line">𓆝 𓆟 𓆞</div></div>
-            <div class="catch-note"><h4>時合い・釣果の気配</h4><div class="stars" id="stars"></div><p id="catchText"></p></div>
-          </div>
-          <div class="bottom-grid">
-            <div class="info-box"><h4>✦ ラッキーアイテム ✦</h4><p id="luckyItem"></p></div>
-            <div class="info-box"><h4>現地ワンポイント</h4><p id="localTip"></p></div>
-          </div>
-          <button class="again-btn" id="againBtn" type="button">❄ もう一度占う ❄</button>
-        </div>
-      </section>
-    </main>
-
-    <section class="gallery panel hidden" id="gallery">
-      <div class="gallery-head"><div><p class="eyebrow">WAKASAGI TAROT</p><h2>ワカサギタロット 22枚</h2></div><button id="closeGallery" type="button">閉じる</button></div>
-      <p class="gallery-note" id="galleryStatus">22枚を確認中…</p>
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </section>
-  </div>
-  <script src="app.js"></script>
+<div class="app-shell">
+<header class="hero">
+<div class="hero-mark">✦</div>
+<p class="eyebrow">TOHOKU WAKASAGI ORACLE</p>
+<h1>東北ワカサギ占い</h1>
+<p class="lead">実釣データ × 天気 × ワカサギタロット</p>
+</header>
+<main class="layout">
+<section class="panel controls">
+<h2>❄ 神託を始める ❄</h2>
+<form id="fortuneForm">
+<label>釣行日<input id="tripDate" type="date" required></label>
+<label>場所・釣りスタイル<select id="location" required></select></label>
+<label>モード<select id="mode"><option value="normal">NORMAL</option><option value="hard">HARD</option><option value="oni">鬼HARD</option></select></label>
+<button class="primary" type="submit">✦ カードを引く ✦</button>
+</form>
+<button class="secondary" id="galleryBtn" type="button">22枚のカードを見る</button>
+<p class="tiny">カード画像はすべて <code>assets/tarot/</code> の固定ファイルを直接参照します。</p>
+</section>
+<section class="panel result-panel">
+<div id="emptyState" class="empty-state"><div class="placeholder">?</div><h2>今日の神託を待っています</h2><p>日付と釣り場を選んでカードを引いてください。</p></div>
+<div id="result" class="hidden">
+<div class="result-head"><div><p class="eyebrow">本日の神託</p><h2 id="resultLocation"></h2><p id="resultMeta"></p></div><div class="weather"><span id="weatherText">天気確認中</span><strong id="weatherNumbers">--</strong></div></div>
+<div class="card-layout"><figure class="tarot-frame"><img id="tarotImage" alt=""></figure><div class="oracle"><div class="card-title"><span id="tarotNumber"></span><strong id="tarotName"></strong></div><p id="oracleText"></p><em id="tagline"></em></div></div>
+<div class="guidance"><div><span>棚</span><strong id="shelf"></strong></div><div><span>仕掛け</span><strong id="rig"></strong></div><div><span>オモリ</span><strong id="sinker"></strong></div><div><span>餌</span><strong id="bait"></strong></div><div><span>穂先</span><strong id="tip"></strong></div></div>
+<div class="catch"><div><span>予想釣果</span><strong id="catchRange"></strong></div><p id="localTip"></p></div>
+<button class="secondary" id="againBtn" type="button">もう一度占う</button>
+</div>
+</section>
+</main>
+<section class="panel gallery hidden" id="gallery"><div class="gallery-head"><div><p class="eyebrow">WAKASAGI TAROT</p><h2>ワカサギタロット 22枚</h2></div><button id="closeGallery" type="button">閉じる</button></div><p id="galleryStatus" class="status">22枚を検証中…</p><div id="galleryGrid" class="gallery-grid"></div></section>
+</div>
+<script src="app.js?v=clean2"></script>
 </body>
 </html>
