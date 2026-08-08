@@ -1,1 +1,0 @@
-Clean rebuild v2: fresh app shell and direct tarot asset binding. No legacy overrides.
