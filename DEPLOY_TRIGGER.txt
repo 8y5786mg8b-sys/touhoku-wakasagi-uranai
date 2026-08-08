@@ -1,0 +1,1 @@
+Force Vercel redeploy after restoring tarot assets on 2026-08-08.
