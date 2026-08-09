@@ -1,0 +1,92 @@
+.tarot-card {
+  padding: 3px;
+  background: #020913;
+  overflow: hidden;
+}
+
+.tarot-button { position:relative; display:block; width:100%; border:0; color:#fff; cursor:zoom-in; font:inherit; }
+.tarot-button>span { position:absolute; right:8px; bottom:8px; padding:5px 8px; border:1px solid rgba(228,197,119,.58); border-radius:999px; background:rgba(1,8,17,.78); color:#f5dda0; font-size:9px; letter-spacing:.06em; pointer-events:none; }
+
+.tarot-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+body.modal-open { overflow:hidden; }
+.card-lightbox { position:fixed; z-index:1000; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:max(18px,env(safe-area-inset-top)) 16px max(18px,env(safe-area-inset-bottom)); background:rgba(0,6,15,.96); backdrop-filter:blur(8px); cursor:zoom-out; }
+.card-lightbox img { display:block; width:auto; max-width:min(92vw,680px); height:auto; max-height:calc(100dvh - 126px); object-fit:contain; border:1px solid #b99849; border-radius:10px; box-shadow:0 0 36px rgba(78,171,225,.2),0 0 0 4px rgba(229,197,113,.08); cursor:default; }
+.card-lightbox p { margin:10px 0 1px; color:#f5dda0; font-size:17px; letter-spacing:.12em; }
+.card-lightbox small { color:#7e9aaf; font-size:10px; }
+.lightbox-close { position:fixed; z-index:1001; top:max(14px,env(safe-area-inset-top)); right:14px; display:grid; place-items:center; width:44px; height:44px; padding:0; border:1px solid #6d8ca4; border-radius:50%; background:rgba(6,24,41,.92); color:#fff; font:30px/1 system-ui; cursor:pointer; }
+
+/* iOS Safari gives date controls a wide intrinsic size. Keep every form row
+   on the same inner grid as the location selector. */
+.form-panel label,
+.form-panel input,
+.form-panel select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.form-panel input[type="date"] {
+  display: block;
+  inline-size: 100%;
+  min-inline-size: 0;
+}
+
+.date-shell {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 50px;
+  margin-top: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #07172b;
+}
+
+.date-shell input[type="date"] {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.weather-card { margin: 0 20px 18px; padding: 16px; border: 1px solid #37698a; border-radius: 13px; background: linear-gradient(145deg,#0d2944,#081a2d); }
+.weather-title { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:13px; }
+.weather-title span { color:#91d9f7; font-size:11px; letter-spacing:.12em; }
+.weather-title b { font-size:18px; color:#fff1b8; }
+.weather-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.weather-grid div { padding:10px; border-radius:8px; background:#061629; }
+.weather-grid small,.weather-note { display:block; color:#789ab2; font-size:10px; }
+.weather-grid strong { display:block; margin-top:5px; font-size:12px; }
+.weather-note { margin-top:10px; }
+.details.expanded .wide { grid-column:1/-1; }
+@media(max-width:400px){.weather-card{margin-left:14px;margin-right:14px}}
+
+.location-info { margin:18px 20px; padding:18px; border:1px solid #8b7340; border-radius:14px; background:linear-gradient(150deg,#10283e,#071728); }
+.info-heading { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:14px; }
+.info-heading span { color:#e3c77e; font-size:13px; letter-spacing:.12em; }
+.info-heading b { color:#7fcce9; font-size:10px; }
+.location-info dl { display:grid; gap:8px; margin:0; }
+.location-info dl div { display:grid; grid-template-columns:48px 1fr; gap:10px; padding-bottom:8px; border-bottom:1px solid #28465e; }
+.location-info dt { color:#79b9d6; font-size:10px; }
+.location-info dd { margin:0; font-size:12px; line-height:1.55; }
+.location-info p { color:#a9c4d8; font:11px/1.7 system-ui; }
+.info-links { display:grid; gap:8px; }
+.info-links a { display:flex; align-items:center; justify-content:space-between; min-height:45px; padding:11px 14px; border:1px solid #365d7a; border-radius:10px; color:#ddecf6; text-decoration:none; font-size:12px; background:#081a2d; }
+.info-links a.primary { border-color:#c9a74f; color:#fff1bc; background:#17314a; }
+.info-links a span { color:#81cce9; font-size:16px; }
+.location-info>small { display:block; margin-top:12px; color:#607f95; font:9px/1.6 system-ui; }
+@media(max-width:400px){.location-info{margin-left:14px;margin-right:14px}}
