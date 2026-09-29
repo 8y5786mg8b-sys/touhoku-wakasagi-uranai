@@ -1,0 +1,16 @@
+{
+  "name": "東北ワカサギ占い",
+  "short_name": "ワカサギ占い",
+  "description": "実際の釣り場情報、天気予報、タロットを組み合わせた東北のワカサギ釣り占い。",
+  "lang": "ja",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#030b17",
+  "theme_color": "#061429",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

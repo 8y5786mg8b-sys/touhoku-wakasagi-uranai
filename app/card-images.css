@@ -71,7 +71,11 @@ body.modal-open { overflow:hidden; }
 .weather-grid div { padding:10px; border-radius:8px; background:#061629; }
 .weather-grid small,.weather-note { display:block; color:#789ab2; font-size:10px; }
 .weather-grid strong { display:block; margin-top:5px; font-size:12px; }
+.speed-equivalent { display:block; margin-top:3px; color:#789ab2; font-size:9px; }
 .weather-note { margin-top:10px; }
+.weather-detail-link { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:12px; padding:11px 12px; border:1px solid #5b91b2; border-radius:9px; background:#102e49; color:#dff5ff; text-decoration:none; }
+.weather-detail-link span { min-width:0; font-size:11px; line-height:1.45; }
+.weather-detail-link b { flex:0 0 auto; color:#fff0b1; font-size:11px; white-space:nowrap; }
 .details.expanded .wide { grid-column:1/-1; }
 @media(max-width:400px){.weather-card{margin-left:14px;margin-right:14px}}
 
@@ -90,3 +94,42 @@ body.modal-open { overflow:hidden; }
 .info-links a span { color:#81cce9; font-size:16px; }
 .location-info>small { display:block; margin-top:12px; color:#607f95; font:9px/1.6 system-ui; }
 @media(max-width:400px){.location-info{margin-left:14px;margin-right:14px}}
+
+.gear-recommendations { margin:18px 20px; padding:17px; border:1px solid #587d98; border-radius:14px; background:linear-gradient(150deg,#0d2943,#061524); }
+.gear-recommendations.hard-pick { border-color:#7658a6; background:linear-gradient(150deg,#251b45,#0b1326); }
+.gear-recommendations.hard-pick .gear-heading small { color:#d1a8ff; }
+.gear-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.gear-heading span { color:#f0d68e; font-size:13px; letter-spacing:.11em; }
+.gear-heading small { color:#80cce9; font:9px system-ui; }
+.gear-card { display:grid; grid-template-columns:138px 1fr; gap:13px; margin-top:10px; padding:10px; overflow:hidden; border:1px solid #395d78; border-radius:12px; background:#061629; color:#eff9ff; text-decoration:none; box-shadow:0 8px 20px #0004; }
+.gear-card:active { transform:scale(.99); }
+.gear-photo { position:relative; min-height:182px; overflow:hidden; border-radius:8px; background:#fff; }
+.gear-photo img { display:block; width:100%; height:100%; object-fit:cover; }
+.gear-photo span { position:absolute; top:7px; left:7px; padding:4px 7px; border-radius:999px; background:#052038e8; color:#fff1b4; font:700 9px system-ui; }
+.gear-placeholder { position:relative; min-height:182px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; overflow:hidden; border:1px solid #2d5875; border-radius:8px; background:radial-gradient(circle at 50% 30%,#1d5a7d,#07192c 68%); text-align:center; }
+.gear-placeholder>span { position:absolute; top:7px; left:7px; padding:4px 7px; border-radius:999px; background:#052038e8; color:#fff1b4; font:700 9px system-ui; }
+.gear-placeholder>b { color:#eff9ff; font-size:15px; letter-spacing:.08em; }
+.gear-placeholder>small { color:#6b9bb5; font:700 8px/1.55 system-ui; letter-spacing:.18em; }
+.gear-copy { display:flex; min-width:0; flex-direction:column; align-items:flex-start; }
+.gear-copy>small { color:#80cce9; font:9px/1.4 system-ui; }
+.gear-copy h3 { margin:3px 0 1px; font-size:15px; line-height:1.35; }
+.gear-copy>b { color:#f5d989; font-size:12px; }
+.gear-copy ul { display:flex; flex-wrap:wrap; gap:5px; margin:9px 0 7px; padding:0; list-style:none; }
+.gear-copy li { padding:4px 6px; border:1px solid #31536d; border-radius:999px; color:#a8cadc; font:9px system-ui; }
+.gear-copy p { margin:0; color:#b7cad7; font:10px/1.55 system-ui; }
+.gear-copy em { margin-top:6px; color:#e7edf1; font:normal 10px system-ui; }
+.gear-copy strong { margin-top:auto; padding-top:9px; color:#fff0ad; font:11px system-ui; }
+.gear-note { margin:10px 2px 0; color:#69869a; font:9px/1.55 system-ui; }
+@media(max-width:460px){.gear-recommendations{margin-left:14px;margin-right:14px;padding:12px}.gear-card{grid-template-columns:112px 1fr;gap:10px}.gear-photo{min-height:168px}.gear-copy h3{font-size:13px}}
+
+.pwa-install { max-width:620px; margin:0 auto 20px; }
+.pwa-install-button { display:flex; align-items:center; width:100%; padding:10px 13px; border:1px solid #365d7a; border-radius:13px; background:linear-gradient(145deg,#102942,#071728); color:#eaf8ff; text-align:left; box-shadow:0 12px 30px #0005; cursor:pointer; }
+.pwa-install-button img { width:42px; height:42px; margin-right:11px; border-radius:10px; box-shadow:0 0 0 1px #d8b86c88; }
+.pwa-install-button span { display:flex; flex:1; flex-direction:column; gap:3px; }
+.pwa-install-button b { font-size:12px; letter-spacing:.08em; }
+.pwa-install-button small { color:#789ab2; font-size:9px; }
+.pwa-install-button i { color:#e3c77e; font:normal 25px/1 system-ui; }
+.pwa-install-help { margin-top:8px; padding:14px; border:1px solid #365d7a; border-radius:12px; background:#07182b; color:#dcecf6; font:11px/1.7 system-ui; }
+.pwa-install-help b { color:#f3d68c; }
+.pwa-install-help p { margin:7px 0; }
+.pwa-install-help small { color:#789ab2; }

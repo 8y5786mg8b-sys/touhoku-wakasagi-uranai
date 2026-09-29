@@ -6,7 +6,7 @@ export type Weather = {
 const coordinates:Record<string,[number,number]> = {
   hanayama:[38.78,140.87], nanakawa:[38.43,140.84], wakuya:[38.54,141.13],
   "anenumа":[40.76,141.37], gando:[39.82,141.38], saiko:[40.17,141.30],
-  oshida:[39.88,141.27], "hibara-s":[37.66,140.08], "hibara-n":[37.73,140.05],
+  "hibara-s":[37.66,140.08], "hibara-n":[37.73,140.05],
   onogawa:[37.68,140.13], "towada-k":[40.45,140.88],
 };
 const weatherLabel=(c:number)=>c===0?"快晴":c<=2?"晴れ":c===3?"曇り":c<=48?"霧":c<=57?"霧雨":c<=67?"雨":c<=77?"雪":c<=82?"にわか雨":c<=86?"にわか雪":"雷の可能性";
